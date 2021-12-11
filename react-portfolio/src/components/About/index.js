@@ -1,17 +1,12 @@
 import React from 'react';
+import profileImage from '../../assets/profile/alex.img.jpg';
 
 const About = () => (
     <div>
-        <h1>About Me</h1>
+        <h1 id="about">About Me</h1>
+        <img src={profileImage} className="profile" style={{ width: '10%' }} alt="ProfileImg" />
         <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
-      varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
-      Etiam ut feugiat ex. Cras non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna
-      imperdiet ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras rutrum ligula
-      in tincidunt commodo. Morbi sit amet mollis orci, in tristique ex. Donec nec ornare elit.
-      Donec blandit est sed risus feugiat porttitor. Vestibulum molestie hendrerit massa non
-      consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-      fames ac ante ipsum primis in faucibus.
+        My name is Alejandro Rosas Machado. I am starting a new career in Software Engineering. I have always had a passion for web development. I grew up in Glendale, Arizona, and currently live there. I work at Ability360 Homecare Services as a Supervisor and I have been working there for 7 years. I inspire to be a well-known software engineer. I have always been into computer software and how its made. Few things about me I am 1 out of 8 children. I was born in Mexico and raise here in Arizona.
     </p>
     </div>
 
