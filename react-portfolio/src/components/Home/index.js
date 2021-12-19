@@ -1,9 +1,10 @@
 import React from "react";
+import HeaderPic from '../../assets/profile/HeaderImg.png'
 
-const Home = () => (
-  <div>
-    <h1>Hello, I'm Alejandro Rosas</h1>
-  </div>
+const Home = (props) => (
+  <section>
+    <img alt={props} src={HeaderPic} className="my-1"></img>
+  </section>
 );
 
 export default Home;

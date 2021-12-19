@@ -1,9 +1,5 @@
 body {
-  text-align: center;
+  background-color: rgb(6, 6, 53);
+  color: white;
 }
 
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
