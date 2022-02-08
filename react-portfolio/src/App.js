@@ -6,6 +6,7 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 
 function App() {
 
@@ -32,10 +33,8 @@ function App() {
     <div>
     <div><Nav currentPage={currentPage} handlePageChange={handlePageChange}></Nav></div>
           <div>{renderPage(currentPage)}</div> 
-            <About></About>
-           <Portfolio></Portfolio>
-          <Contact></Contact>
-          <Footer></Footer> 
+          <Modal />
+          <Footer />
     </div>
   );
 }

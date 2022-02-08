@@ -4,11 +4,11 @@ import React from 'react';
 
 const Footer = (props) => {
 const styles = {
-  background: "green",
+  background: "White",
   position: "fixed",
   width: "100%",
   bottom: "0",
-  color: "white",
+  color: "Black",
   fontSize: "20px"
 }
 return (
