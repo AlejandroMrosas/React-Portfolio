@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
 import About from './components/About';
 import Home from "./components/Home";
 import Nav from "./components/Nav";
@@ -10,32 +13,35 @@ import Modal from './components/Modal';
 
 function App() {
 
-  const [currentPage, handlePageChange] = useState('Home');
+  // const [currentPage, handlePageChange] = useState('Home');
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'About':
-        return <About />;
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Contact':
-        return <Contact />;
-        case 'Resume':
-          return <Resume />;
-      default:
-        return <Home />;
-    }
-  };
+  // const renderPage = () => {
+  //   switch (currentPage) {
+  //     case 'About':
+  //       return <About />;
+  //     case 'Portfolio':
+  //       return <Portfolio />;
+  //     case 'Contact':
+  //       return <Contact />;
+  //       case 'Resume':
+  //         return <Resume />;
+  //     default:
+  //       return <Home />;
+  //   }
+  // };
 
 
 
   return (
-    <div>
-    <div><Nav currentPage={currentPage} handlePageChange={handlePageChange}></Nav></div>
-          <div>{renderPage(currentPage)}</div> 
-          <Modal />
-          <Footer />
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/Portfolio' component={{Portfolio}} />
+        <Route path='/Resume' component={Resume} />
+        <Route path='/Contact' component={Contact} />
+      </Switch>
+    </Router>
   );
 }
 

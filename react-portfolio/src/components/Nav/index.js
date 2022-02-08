@@ -1,26 +1,27 @@
 import React from 'react';
-
-function Nav(props) {
-  const tabs = ['Home', 'About', 'Portfolio','Resume', 'Contact'];
+import { Link } from "react-router-dom";
+function Navbar() {
+  // const tabs = ['Home', 'About', 'Portfolio','Resume', 'Contact'];
   return (
-  <ul className="nav nav-tabs">
-      {tabs.map(tab => (
-        <li className="nav-item" key={tab} >
-          <a
-            href={'#' + tab.toLowerCase()}
-            // Whenever a tab is clicked on,
-            // the current page is set through the handlePageChange props.
-            onClick={() => props.handlePageChange(tab)}
-            className={
-              props.currentPage === tab ? 'nav-link active' : 'nav-link'
-            } 
-          >
-            {tab}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <div>
+    <li>
+      <Link to="/">Home</Link>
+    </li>
+    <li>
+      <Link to="/About">About</Link>
+    </li>
+    <li>
+      <Link to="/Portfolio">Portfolio</Link>
+    </li>
+    <li>
+      <Link to="/Resume">Resume</Link>
+    </li>
+    <li>
+      <Link to="/Contact">Contact</Link>
+    </li>
+  </div> 
+
   );
 }
 
-export default Nav;
+export default Navbar;
